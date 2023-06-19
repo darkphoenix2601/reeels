@@ -1,7 +1,7 @@
 import os
 import logging
 import requests
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters
 from bs4 import BeautifulSoup
 
 # Set up logging
@@ -75,7 +75,7 @@ def download_reel(url):
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
 
-message_handler = MessageHandler(Filters.text & (~Filters.command), handle_message)
+message_handler = MessageHandler(filters.Text & (~filters.Command), handle_message)
 dispatcher.add_handler(message_handler)
 
 # Start the bot
