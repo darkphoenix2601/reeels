@@ -1,0 +1,16 @@
+{
+  "name": "instagram-reel-downloader",
+  "description": "Telegram bot to download Instagram Reels",
+  "repository": "https://github.com/yourusername/instagram-reel-downloader",
+  "keywords": ["telegram", "bot", "instagram", "reel"],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram Bot API token"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
